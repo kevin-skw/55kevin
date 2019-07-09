@@ -1,28 +1,32 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <!-- 3. 使用AppHeader -->
+    <app-header></app-header>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- AppSidebar -->
+        <app-sidebar></app-sidebar>
+       
+        <!-- 主内容区域 -->
+        <router-view></router-view>
+      </div>
+    </div>
   </div>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
+//导入组件
+import AppHeader from './components/APPHead'
+import AppHexport from './components/APPHead'
+ 
+ export default{
+   name: 'app',
+   //注册组件
+   component:{
+     AppHeader,
+     AppSiddebar,
+   }
+ }
 </script>
-
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
